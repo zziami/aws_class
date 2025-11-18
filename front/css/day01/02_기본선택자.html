@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>기본선택자예제</title>
+	<!-- 
+	선택자 (매우중요)
+	 -요소를 선택하는 방법
+
+
+   스타일적용
+	 선택자 {
+	  속성명 : 값 ;
+		속성명 : 값 ;
+		}
+
+
+	 1. 전체선택자 교재72쪽 
+	  -* (곱하기 또는 모든이라는 의미가있음)
+	  -모든 요소를 선택함
+	  -우선순위가 가장낮음 : 0점
+    
+
+	 2.태그 선택자 교재74쪽
+	  -태그명
+		-태그들을 선택
+		-우선순위 : 1점 
+
+
+	 3.클래스 선택자 교재86쪽
+	  - . 클래스명
+		-class 값에 클래스명이 들어가는 요소를 선택
+		-class 속성은 모든 태그에서 사용가능한 속성으로, 특별한 기능은 없음 (클래스자체가 기능이없음),스타일 적용할 때 사용함.
+		-우선순위 : 10점
+
+
+	 4. 아이디 선택자 교재87쪽	
+	  - #아이디명
+		- id속성의 값이 일치하는 요소를 선택
+		- 우선순위 : 100점  (아이디는 중복이 안되는 고유의 값을 가지고 있기 때문)
+		
+
+	 - -->
+	 <style>
+   *{ color: red;}
+   div{ color: green;}
+	 .second{ color: blue;}
+	 #name{ color: pink;}
+	 </style>
+</head>
+<body>
+	 <div>안녕</div>
+	 <a href="#">링크1</a>
+	 <div class="second">홍길동</div>
+	 <a href="#" class="second">링크2</a>
+	 <div class="second" id="name">이름</div>
+	 <a href="#">링크3</a>
+</body>
+</html>

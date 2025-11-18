@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자선택자</title>
+	<!-- 
+	선택자  ::selection (콜론이두개)
+	-드래그된 글자들을 선택
+	
+	선택자  ::before (콜론이두개) - 선택이 되는게 아님
+	-요소앞에 글자를 추가
+	-글자 이외의 다양한 작업을 할 수 있음.
+	-content속성이 필수. 앞에 추가할 문자열
+
+	선택자  ::after - 선택이 되는게 아님
+	-요소뒤에 글자를 추가
+	-글자 이외의 다양한 작업을 할 수 있음
+	-content속성이 필수. 앞에 추가할 문자열
+	-flot 속성을 제어할 때 사용
+
+	-->
+
+	<style>
+
+		p::selection{ background: skyblue; color: white;}
+		.text::before{ content: '제 이름은 '; color: red;}
+		.text::after{content: '입니다'; color: green}
+	</style>
+
+</head>
+<body>
+	<h1>문자선택자예제</h1>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto perspiciatis, harum libero tempore atque mollitia vel a blanditiis officia neque provident quam praesentium adipisci magnam id minus consectetur, aliquam sint.</p>
+	<span class="text">홍길동</span>
+
+</body>
+</html>
