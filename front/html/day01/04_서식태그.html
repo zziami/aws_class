@@ -8,7 +8,7 @@
 <body>
 	<!-- 
 	태그 종류
-	 -block 태그 :
+	-block 태그 :
 	  - 새 라인에서 시작. 해당 라인 전체를 공간으로 잡음 
 	  - 너비/높이를 이용하여 크기변경 가능
     - 대표적으로 시멘틱태그가 있음 h1~h6, p,div 등
@@ -21,27 +21,35 @@
 	  -현재 위치에서 시작
 		-너비/높이를 이용하여 크기 변경 가능
 		-대표적으로 img,input 등
-		-->
+	-->
 
-	<!--
-		h1~h6 태그 교재41쪽
-	-제목 태그 (제목, 부제목 , 소제목등.. 제목만 사용가능)
-	-숫자가 작을수록 큰 글씨 
-	<h1>서식태그</h1>
-	<h2>제목2</h2>
-	<h3>제목3</h3>
-	<h4>제목4</h4>
-	<h5>제목5</h5>
-	<h6>제목6</h6> -->
-<!-- p태그  교재 43쪽
-  - 문단을 지정하는 지정
-	- 기본값
+<!--
+	h1~h6 태그 교재41쪽
+	 -제목 태그 (제목, 부제목 , 소제목등.. 제목만 사용가능)
+	 -숫자가 작을수록 큰 글씨 
+	 <h1>서식태그</h1>
+	 <h2>제목2</h2>
+	 <h3>제목3</h3>
+	 <h4>제목4</h4>
+	 <h5>제목5</h5>
+	 <h6>제목6</h6>
+-->
+
+<!--
+	 
+p태그  교재 43쪽
+   - 문단을 지정하는 지정
+	 - 기본값
 	 - 위아래 margin이라는 여백이 있음.
 	 - p태그끼리 위 아래로 배치된 경우 여백이 하나로 통합됨.
 	 -뉴스기사처럼 장문의 글을 쓸때 사용하면 효과적임
- lorem숫자
-  -VS code에서 샘플 문자열이 필요한 경우 사용
-	-숫자만큼 단어들이 나열	 -->
+
+
+lorem숫자
+   -VS code에서 샘플 문자열이 필요한 경우 사용
+	 -숫자만큼 단어들이 나열
+	 -예를들어 lorem5라고 숫자를 쓰면 ㅈㄷㄱ ㅈㄱ ㅅㄱ4 ㅈㄱㄷ ㅈㅅ 이렇게 다섯개의 단어가 자동으로 만들어짐.
+ -->
 
 
 	<h1>p태그 예제</h1>
@@ -52,30 +60,36 @@
 <hr>
 
 <!-- 
- div태그 교재 44쪽
-  - 대표적인 block태그 
-	- 요소들을 묶어서 괸리할때 태그
-		-->
+  div태그 교재 44쪽
+   - 대표적인 block태그 
+	 - 요소들을 묶어서 괸리할때 태그
+	 -css를 사용해 디자인을 적용하거나 페이지의 레이아웃 잡는데 사용함
+	 -반드시 body태그 안에 있음.
+	 -div자체는 보이지 않지만, 그 안의 내용물이 화면에 보임.
+	 -css사용해 디자인을 적용하거나. 페이지의 레이아웃잡는데 사용.컨텐츠를 담는 상자.
+	 -항상새줄에서 시작하고끝남. 너비와 높이를 자유롭게 지정가능함.
+-->
 	<div>
 		<h1>기사 제목</h1>
 		<p>내용. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed quis soluta possimus, ex sit fugiat fugit autem, eum impedit, explicabo natus praesentium porro qui dolore non quos voluptatibus! Ratione, consequatur?</div></p>
 		<p>내용. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eum adipisci illo cupiditate mollitia eos nam nulla nisi est atque ducimus laborum quos facere tenetur qui accusantium, perspiciatis quia quisquam?</p>
-	
 	</div>
 
-	<!-- 
-	strong 태그 교재 45쪽 
+<!-- 
+	strong 태그  교재 45쪽 
 	 - 문장을 강조할 때 사용
 	 - 화면상에 굵은 글씨
 	 - inline 태그
 	 - 스크린 리더기가 강하게 읽음
-	 
-	 
+	  
 	em태그
 	 -약한 강조할 때 사용
 	 -화면상에서 글자 기울임
 	 -inline태그
 	 -스크린 리더기가 강하게 읽음(화면을 글로 읽어주는것)
+
+	-strong과em은 단지 택스트를 굵게하거나 기울이는게 전부가 아니라 스크린리더기에서 강하게 읽어줌. 특정문장을 강조하여 읽는 용도로사용많이함.
+	
 	 
 	d태크
 	 -화면상에서 굵은 글씨 (strong태그랑 차이는 없음)
@@ -85,16 +99,23 @@
 	 -화면상에서 글자기울임
 	 -inline 태그 
 	 -아이콘을 표시할 때 사용
-	 	 -->
+ -->
+
+
 	 <h1>strong, em, b, i태그 예제	</h1>
 	 <p>안녕하세요, 제<strong>이름</strong>은 <em>홍길동</em>입니다.<p>
    <p>안녕하세요, 제<strong>이름</strong>은 <i>홍길동</i>입니다.</p>
 
-	 <!--
+
+<!--
 	 span 태그 교제47쪽
 	  - 대표적인 inline 태그 
+		- inline요소만 그룹화가능.(div는 모든요소를 그룹화함.)
 		- 기능은 없음
 		- 보통 문자들을 묶이거나 문자들 중 일부에 스타일을 적용할 때 사용
+		- 문장이나 택스트의 일부처럼 작은 인라인영역을 묶어서 특정스타일을 적용할때 사용.
+		- div태그처럼 컨텐츠를 묶는 역할이 있지만 차이점이 있음. 줄바꿈 없이 텍스트흐름을 따라가고. 문장내에서 일부단어에 스타일을 적용할때 사용하고, 너비나 높이를 직접지정할수있음.
+		- css를 사용해 문장내의 특정단어나 일부분 색깔,글꼴,크기 등 서식을 바꿀때, 줄바꿈없이 텍스트 흐름을 따라가는 인라인요소임.
 		
 	 br태그
 	 - 줄바꿈
@@ -102,23 +123,27 @@
 	 
 	 hr태그
 	 -가로줄 (실선)
-	 -	-->
+-	-->
+
+
 	 <h1>span태그 예제</h1>
 	 <p>안녕하세요. 제이름은 <div style="color:red">홍길동</div>입니다. </p>
 
-	 <!-- 
+<!-- 
 	 img태그 교제48쪽
-	  - 이미지를 넣을 때 사용
-		- inline-block태그
-		- 속성 
+	   - 이미지를 넣을 때 사용
+		 - inline-block태그
+		 - a태그와 마찬가지로 속상을 추가로 지정해야함.
+		 - 속성 
 		 - src : 가져올 이미지 주소
 		 - alt : 이미지 로딩 실패시 보여줄 문구이자 스크린 리더기가 읽을 문구
 		 - width : 이미지너비, 기본값은 원본 이미지 크기의 100%, auto 지정가능
 		 - height: 이미지높이, 기본값은 원본 이미지 높이지 100%, auto 지정가능
-		-width/height의 auto사용법
+	 
+	 -width/height의 auto사용법
 		 -width나 height 중 하나를 고정으로 하고, 나머지를 auto로 설정해서 이미지 비율이 깨지지 않게 함.
 		 
-		 -->
+-->
 		 <h1>이미지 태그 예제</h1>
 		 <img width="auto" height="auto"
 		 src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/330px-Golde33443.jpg" alt="강아지 이미지">
