@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<titlet>영역속성예제</titlet>
+
+	<!-- 
+	 box-sizing
+	-width/heigth(너비/높이)의 기준을 정하는 속성
+	-값
+	 -border-box: 너비/높이가 컨텐츠+패딩+테두리를 합친 width/heigth (예시로 모니터테두리를 포함한사이즈)
+	 -content-box: 기본값, 너비/높이가 컨텐츠의 width/heigth (예시로 모니터실제사이즈)
+
+	width/heigth (교재113쪽) 
+	-요소의 너비/높이를 지정
+	-box-sizing 값에 따라 의미가 달라짐
+  
+	margin  (여백임 교재115쪽)
+	-요소의 테두리 밖 여백을 지정하는 속성 (액자시작점을 표시하는 의미임.)
+	-margin-top, margin-right, margin-bottom, margin-left를 줄여쓴 단축 속성
+	-방향은 위부터 시계방향. 상>우>하>좌 (시계방향)
+	-액자의 위치를 설정.
+	-사용예시
+	 -margin : 10px 20px 30px 40px
+	  -상 : 10px, 우 : 20px 하 : 30px 좌 : 40px
+	 -margin : 10px 20px 30px    (좌가 없으면 좌우가 동일함  상하가 동일한 경우는 4개 다써야함)
+	  -상 : 10px, 우 : 20px 하 : 30px 좌 : 40px
+	 -margin : 10px 20px  (하랑 좌가 없으니  상하 동일 좌우 동일 )
+	  -상 : 10px, 우 : 20px 하 : 30px 좌 : 40px
+   -margin : 10px  (우하좌가 없으니  상하좌우 동일)
+	  -상 : 10px, 우 : 20px 하 : 30px 좌 : 40px
+   -margin : 0auto 
+		 -위아래 0 좌우 자동배치 - width(너비)가 고정px일때 가운데 배치.
+
+	paddig (얘도 여백임  교재118쪽)	 
+	 -요소의 테투리 안 여백을 지정하는 속성 
+	 -액자안의 사진 시작위치를 지정하는것.
+	 -사용방식은 margin과 동일함
+	 -padding-top, padding-right, padding-bottom, padding-left를 줄여쓴 단축속성.. 
+
+	
+	테두리 (교재 121쪽)
+   -위치 : top, right, bottom, left 
+	 -border-width
+	 -데투리 두께
+	 -적는방법 border-위치-width 줄여쓴 단축 속성
+	 -순서는 위를 기준으로 시계방향 (상 우 하 좌)
+	 
+
+	border-color
+	 -테두리색상
+	 -border-위치-color를 줄여쓴 단축 속성
+	 -순서는 위를 기준으로 시계방향
+	 
+	
+	border-style
+	 -테두리종류
+	 -border-위치-style을 줄여쓴 단축속성
+	 -순서는 위를 기준으로 시계방향
+	 -값
+	 -solid, dashed, botted, none, hidden, double, groove, ridge, inset, outset등
+	 -solid(실선), none(없음)을 가장 많이 사용함 
+
+	border
+	 -모든 테두리 정보를 한번에 지정하는 속성
+	 -border-width, border-color, border-style을 줄여쓴 속성
+	 -모든 테두리(상하좌우)를 동일하게 지정
+	 -사용예시
+	  -border : 1px solid black;   <=이렇게 예시문제로 많이 썼었음.
+	
+	border-위치(top, right, bottom, left,)
+	 -각 위치의 테두리 정보를 한번에 지정하는 속성
+   -사용예시 
+	  -border-top : 1px solid black
+
+	border-radius 
+	 -둥근 테두리를 지정하는 속성 
+	 -border-위치1-위치2-radious 를 줄여쓴 단축속성
+	  -위치1 : top,bottom, 위치: left-right
+		-(왼쪽위모서리를 기준으로 시계방향)
+		-보통 단위로 px을 사용, %을 이용하면 원이나 타원을 만들 수 있음.
+
+
+
+	-->
+
+	 <style>
+		.box{ border: 1px solid black; height: 100px;}
+		.box1{ margin: 10px 20px 30px 40px;}
+		.box2{ width: 200px; margin: 0 auto;}
+
+		.box3,.box4,.box5{ width: 300px; height: 300px;}
+		.box4{ padding: 20px;}
+		.box5{ padding: 20px; box-sizing: border-box;}
+
+		.border-container > div{ margin-bottom: 10px; height: 100px; border: 1px solid black; line-height: 100px; text-align: center;}
+		.border-container > .box6{
+			border-top: 3px; solid red; 
+			border-right: 5px dotted green ;
+			border-bottom: 10px dashed blue;
+			border-left: 15px double grey;}
+
+		.border-container > .box7{
+			border-color: red green blue grey;
+				 }
+	  .border-container > .box8{
+			border-width: 3px 6px;
+		}
+		.border-container > .box9{
+			border-style: solid dashed double none;
+		}			
+		.border-container > .box10{
+			border-radius: 10px;
+		}
+		.border-container > .box11{
+			border-radius: 50%; width: 200px; height: 200px; line-height: 200px;
+		}
+	 </style>
+</head>
+<body>
+	<h1>영역속성예제</h1>
+	<h2>margin예제</h2>
+	<div class="container">
+		<div class="box box1"></div>
+		<div class="box box2"></div>
+	</div>
+
+<h2>paddig예제</h2>
+	<div class="container">
+		<div class="box box3">
+			width : 300px <br> 
+			heigth : 300px <br>
+			box-sizing : content-box <br>
+			paddig : 0px <br>
+      실제요소의 너비=<br>
+			300px(컨텐츠너비)<br>
+			+1px(왼쪽테두리) + 1px(오른쪽테두리)<br>
+			=302px
+
+		</div>
+		<div class="box box4">
+	    width : 300px <br> 
+			heigth : 300px <br>
+			box-sizing : content-box <br>
+			paddig : 20px <br>
+			content-box에서 width는 컨텐츠 너비이기 때문에 <br>
+			실제 요소의 너비<br> 
+			300px(컨텐츠)<br> 
+			+ 20px(왼쪽패딩) + 20px(오른쪽패딩)<br> 
+			+ 1px(왼쪽테두리) + 1px(오른쪽테두리)<br>
+			=342px
+
+		</div>
+
+
+		<div class="box box5">
+	    width : 300px <br> 
+			heigth : 300px <br>
+			box-sizing : border-box <br>
+			paddig : 20px <br>
+			border-box에서 width는 컨텐츠 + 패딩 + 테두리너비 <br>
+			실제컨텐츠의 너비 <br>
+			300px(실요소의 너비)<br>
+			-20px(왼쪽패딩) - 20px(오른쪽패딩)<br>
+			-1px(왼쪽테두리) - 1px(오른쪽테두리)<br>
+			=258px		
+		</div>
+
+	<h2>border예제</h2>
+	 <div class="border-container">
+	  <div class="box6">border</div>
+		<div class="box7">border-color</div>
+		<div class="box8">border-width</div>
+		<div class="box9">border-style</div>
+		<div class="box10">border-radius1</div>
+		<div class="box11">border-radius2</div>
+	</div>
+</body>
+</html>
