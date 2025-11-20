@@ -18,10 +18,8 @@
 	  /* 문제1번 */
 	  .container1{border: 3px solid black; float: left; padding: 10px;}
 		/* 컨테이너 1의 테두리 자식요소에 플롯이 있고 자식 요소를 감싸야해서 필요함. 박스들과 컨테이너 사이의 간격을 설정 패딩(간격)10픽셀 */
-
     .container1 > .box{ width: 100px; height: 150px; background-color: yellow; float: left;}  
     /* 각 박스의 너비 높이 배경은 노랑색 한줄로 나열하기 위한 설정 */
-
 		.container1 > .box~.box{margin-left: 10px;}
 		/* 박스 사이의 간격을 위해 첫번째 요소를 제외한 나머지 박스에 왼쪽 여백을 지정 */
 
@@ -29,42 +27,33 @@
 
 		/* 문제2번 */
 
-
-		.clearfix{ content: ''; display: block; clear: both;}
-
+		.clearfix{ content: ''; display: block; clear: both;} 
 		.container1-1{border: 3px solid black; float: left; padding: 10px;}
     /* 컨테이너1-1번의 테두리, 자식요소를 감싸기 위한 설정 컨테이너1-1과 박스사이의 여백 */
-	  
-		.container1-1>.box{ width: 100px; height: 150px; background-color: yellow; float: left; margin-left: 10px;}
+
+
+	  .container1-1>.box{ width: 100px; height: 150px; background-color: yellow; float: left; margin-left: 10px;}
     /*박스들의 너비 높이 배경색 박스들 한줄로나란히 박스에 왼쪽여백 */
-    
-		.container1-1 > .inner-container{ margin-left: -10px;}
+    .container1-1 > .inner-container{ margin-left: -10px;}
 
 
 
-	/* 문제3번 */
+	 /* 문제3번 */
+		 
+   .container2{ width: 500px;	height: 200px; box-sizing: content-box; border: 3px solid black; padding: 10px;}
+	 .container2 > .box{ background: green; width: calc((100% - 20px) / 3); height: 100%; float: left;}
+	 .container2 > .box + .box{ margin-left: 10px;}
+	
+      /* 컨텐츠 너비 높이 테두리 컨테이너1과 컨테이너1-1때문에 겹치는 현상을 간단히 해결하기 위해 설정 컨테이너와 박스사이의 간격*/
+      /* 2번째 박스부터 왼쪽 여백을 지정 * 문제1번이랑 다른점은 박스사이즈설정이네. */
 
-	 /* .container2{ border: 3px solid black; width: 500px; height: 200px; padding: 10px; float: left;} */
-	 /* .container2 > .box{ width: 100px; height: 200px; background-color: red; float: left;} */
-	 /* 위에꺼는 내가 한거다 틀림 뭐가 틀린지도 모르겠엉.*/
-
-
-	 
-   .container2{ width:500;	height: 200px; box-sizing: content-box; border: 3px solid black; float: left; padding: 10px;}
-		/* 컨텐츠 너비 높이 테두리 컨테이너1과 컨테이너1-1때문에 겹치는 현상을 간단히 해결하기 위해 설정 컨테이너와 박스사이의 간격*/
-   
-	 .container2 > .box{ background: green; width: 100px; height: 100%;}
-	 /* 박스 배경색 임시너비높이 높이는 컨테이너2 컨텐츠의 높이를 가져온다음에 너비는 100% 사이여백을 뺀 나머지를 3등분. 박스를 한줄로 나란히 */
-   /* .container2 > .box{ background: green; width: 100px; height: 100%; float: left;} * 계산기함수로 해보기/
-
-
-
-   .container2 > .box + .box{ margin-left: 10px;}
-	 /* 2번째 박스부터 왼쪽 여백을 지정 */
-
-
-
-	 
+     
+			/* 연습 */
+     .clearfix{ content: ''; display: block; clear: both;} 
+     .container2-1{ width: 400px; height: 300px; border: 3px solid blue; box-sizing: content-box; padding: 5px;} 
+		 .container2-1 > .box{ background: pink; width:  calc ((100% - 10px) /3); height: 100%; float: left;}
+		 .container2-1 > .inner-container{ margin-left: -5px;}
+	    /* .box + .box 하거나  .box~.box해도 상관없는듯.*/
 		
 
 
@@ -74,12 +63,12 @@
 	<h1>영역분할예제</h1>
  <div>
 
- </div>
-<div class="clearfix"></div>
- <div class="container1">
-	<div class="box"></div>
-	<div class="box"></div>
-	<div class="box"></div>
+</div>
+ <div class="clearfix"></div>
+  <div class="container1">
+	 <div class="box"></div>
+	 <div class="box"></div>
+	 <div class="box"></div>
  </div>
 
 
@@ -126,6 +115,15 @@ calc()함수로 해보기
 	<div class="box"></div>
 	<div class="box"></div>
 </div>
+
+<!-- 연슴해보자 -->
+ <div class="container2-1">
+ <div class="inner-container">
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</div>
+
 </body>
 </html>
 
