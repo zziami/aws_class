@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>애니메이션(변화를감지하는속성)</title>
+
+
+	<!-- 
+	애니메이션 적용 방법  교재 181~184
+	1. 애니메이션을 동록
+	2. 등록된 애미메이션을 적용해야함. 
+	
+	애니메이션 등록하기 
+	@keyframes 애니메이션명{직접지정하는것}
+    시작지점1{ 속성명 : 값; 속성명 : 값 }	
+		시작지점2{ 속성명 : 값, 속성명 : 값 }.....
+		지점은 0%~100% 0%는 from, 100%는 to로 쓸수 있음. 
+    1지점값이 제일 작고 뒤로 갈수록 지점값이 커짐. 맞아???
+    0은 from으로 시작가능
+
+	
+  애니메이션 적용 방법
+	 - 애니메이션 관련 속성의 값들을 이용
+	 
+	animation-name
+	 -적용할 애니메이션 이름(등록된 애니메이션 중 선택) 
+
+  animation-duration
+	 - 애니메이션이 적용되는 시간.
+
+	animation-direction
+	 -애니메이션을 반복할 때 진행 방향을 설정
+	 -값 
+	  -namal : 기본, 처음부터
+		-alternate: 역순 
+
+	 
+	animation-iterator-count
+	 -반복횟수
+	 -값 
+	  -숫자 : 숫자만큼 반복
+		-infinite : 무한반복
+	
+	animation-timing-function
+	 -애니메이션 수행속동, transition-timing-function 참고
+	 
+	animation-fill-mode
+	 -애니메이션 끝난 후 또는 시작 전의 상태를 지정
+	 -값
+	  - none: 아무것도 적용하지 않음
+		- forword : 애니메이션이 끝난 후 키프레임 스타일을 유지 (마지막 장면)
+		- backward : 애니메이션이 시작하기 전 첫번째 키프레임 스타일을 유지
+    - both: 애니메이션이 시작하기전에는 첫번째 키프레임 스타일을, 끝난후에는 마지막 키프레임 스타일을 유지.
+	
+	animation-delay
+	 -애니메이션 시작 전 딜레이 시간
+
+	animation-play-state
+	 -애니메이션 재생여부
+	 -hover와 같이 특정상황에서 일시정지 시킬때 사용함.
+	 -값
+	  - running : 기본값, 재생
+		- paused : 일시정지 
+	 
+	animation
+	 - name duration timing-function delay iterator-count direction fill-mode를 한번에 적용하는 단축속성. 
+
+
+
+
+	-->
+
+	<style>
+   .box{ width: 100px; height: 100px; background: yellow; border: 3px solid black; line-height: 100px; text-align: center;font-weight: bold;
+	 animation-name: fontsizeUp;
+	 animation-delay: 500ms;
+	 animation-duration: 3s;
+	 animation-direction: alternate;
+	 animation-fill-mode: forwards;
+	 animation-iteration-count: infinite;
+	 animation: fontSizeUp 3s 500ms infinite alternate forwards;}
+
+	 /* 박스크기 배경테두리  텍스트 중앙정렬 , 애니메이션 정보 노말일때랑 알터네이트랑 비교해서 해보기  카운터2를 infinite로도 바꿔보기 */
+   @keyframes fontSizeUp{from{ font-size: 20px;} to{font-style: 60px;}}
+	
+	 
+   
+
+	</style>
+</head>
+<body>
+	<h1>애니메이션예제</h1>
+	<div class="container">
+		<div class="box">꽝</div>
+	</div>
+</body>
+</html>
