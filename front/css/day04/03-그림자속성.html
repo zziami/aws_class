@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>그림자효과</title>
+ <!-- 
+	 텍스트쉐도우(text shadow)
+	 -글자에 그림자 효과를 적용
+	 -none:적용안함
+	 -수평거리 수직거리 번짐 색상 순으로 값을 지정 
+	 (0.0.0) -첫번째칸은 수평거리 좌우 두번째칸이 상하 세번째칸이 선명도 
+	 -번짐을 그림자가 퍼지는정도 (숫자가크면 흐릿해짐)
+	 -그림자 효과는  ',' 를 이용하여 여러효과를 한번에 적용
+	 
+	 
+	 박스쉐도우(box shadow)
+	 -박스에 그림자 효과를 적용
+	 -수평 수직 흐림 번짐 (inset)순으로 적용
+	  (글자가 음각으로파였기 때문에 글자속으로 그림자효과를 주는것을 말함 )
+	 -박스테두리를 활용할때
+   
+
+
+
+	 --->
+
+  
+
+	<style>
+
+ .text-container{ font-size: 30px; font-weight: bold;}
+ .text-container > div{ padding: 10px;}
+ .text-shadow1{text-shadow: 3px 0 0 red;}
+ .text-shadow2{text-shadow: 0 4px 0 blue;}
+ .text-shadow3{text-shadow: 4px 4px 10px green;}
+ .text-shadow4{text-shadow: 3px 3px 3px yellow; color:aquamarine}
+ .text-shadow5{text-shadow: 3px 0 0 ;}
+
+
+	</style> 
+
+   <style>
+   .box-container > div{ margin: 30px 0; width: 100px; height: 100px; background: yellow;}
+	 .box-shadow1{ box-shadow: 10px 10px 0 10px red}
+	 /* 상하좌우 10 흐림은 0 번짐이 10 */
+	 .box-shadow2{ box-shadow:  10px 10px 10px red}
+   /* 흐림 10 번짐0 */
+	 .box-shadow3{ box-shadow: 0 0 2px 0 rgba(0, 0, 0, 4);}
+   /* 그림자로 박스테두리 적용 - 너비.높이에 영향을 미치지 않음 - 네이버에도 뉴스나 쇼핑테두리들 */
+ 
+ 
+   </style>
+	 
+
+
+</head>
+<body>
+	<h1>그림자속성</h1>
+	<h2>텍스트그림자</h2>
+  <div>
+		<div class="text-container">
+			<div class="text-shadow1">안녕하세요1</div>
+			<div class="text-shadow2">안녕하세요2</div>
+			<div class="text-shadow3">안녕하세요3</div>			
+			<div class="text-shadow4">안녕하세요4</div>
+			<div class="text-shadow5">안녕하세요5</div>			
+		</div>
+		<h2>박스그림자</h2>
+	</div>
+	<div class="box-container"> 
+	 <div class="box-shadow1"></div>
+   <div class="box-shadow2"></div>
+	 <div class="box-shadow3"></div>
+	</div>
+</body>
+</html>
