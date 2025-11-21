@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>transform속성예제</title>
+<!--transform (교재 170쪽)
+	-요소를 변형하는 속성 
+	-확대, 축소, 회전, 비틈, 이동,
+	-값으로 함수가 옴. 
+  
+	이전에 사용했던 함수들. 
+	-calc(),rgb()rgba()url()
+
+	공통 설명(교재 174쪽)
+	-z축 관련한 효과를 보려면 perspective속성을 부모요소에 적용해야함. 
+
+
+	translate?(?물음표뒤는 여러가지가 올수있다. 예를 들면 x나 y등의 각각의 값)
+	- 주어진 방향으로 이동하는 함수
+	- ?
+	 - X ; x축 방향으로 이동. translateX(-50%) 요소 너비의 반만큼 앞으로 이동
+	 - Y ; y축 방향으로 이동.
+   - 없음 : x,y축 방향으로 이동을 함
+	 - Z :z축방향으로 이동함
+	 -3d : x,y,z축 방향으로 이동
+   마진은 양옆의 요소 전체에 영향이가는데 translate는 지정요소만 영향을 줌.
+
+	-->
+	
+<style>
+  .box{ width: 200px; height: 100px; border: 3px solid black; margin-bottom: 50px; background: yellow;}
+  /*박스만드는 기본값 마진바톰은 박스밑에 사이에 공간을 주기위해서 */
+	.container{perspective: 500px; margin-bottom: 150px;}
+	/* z축 관련ㄴ하여 효과를 제대로 적용하기 위해서  */
+	.t1{transform: translateX(10px);}
+	/* 마진레프트랑 같은 결과값 %로 하면 상자너비의 %값임(예를들어 50%이면 상자크기의 50%만큼 벌어짐 ) */
+	.t2{transform: translateY(20px);}
+	/* 마진바톰이 50이였는데 30으로 줄여봤음 */
+	.t3{transform: translate(50px,30px);}
+
+  .t4{transform: translateZ(100px);}
+	/* 양수100으로 하면 커보이고. 음수100으로 하면 작아보이고 */
+	.t5{transform: translate3d(50px, 30px, 100px);}
+
+
+
+</style>
+
+<!-- 
+scale?
+
+-요소를 확대/축소하는 함수
+-? 
+- x축(가로) : x축방향으로 확대/축소 (가로방향)
+  y축(세로) : y축방향으로 확대/축소 (세로방향)
+  없음 : x,t축방향으로 확대/축소 
+  z축 : z축방향으로 확대/축소
+	3d : xyz축 방향으로 확대/축소 
+-->
+<style>
+	 .boxs{ width: 200px; height: 100px; border: 3px solid black; margin-bottom: 50px; background: yellow;}
+   .sc1{ transform: scaleX(2);}
+	 .sc2{ transform: scaleY(1.3);}
+	 .sc3{ transform: scale(2, 1.3);}
+	 .sc4{ transform: scaleZ(10);}
+	 /* 두께를 지정할 수 없기때문에 (z축 두께는0이기때문) 실제 회전할때 보여지는 결과값임. */
+	 .sc5{ transform: scale(2, 1.3, 20);}
+
+	 /* 네이버 쇼핑탭을 하면 화면에 마우스호버할때 사진이 살짝 커지는거 그런효과임 */
+
+</style>
+
+ <!-- 
+roate?
+-요소를 회전 시키는 함수
+- ? 
+ -위의 함수에서 참고(x,y,없음,3d,z)
+ 
+-->
+
+<!-- 
+skew?
+ -요소를 비트는 함수 (위에 함수들은 모양이 변경되지는 않는데 이건 모양이 바뀜)
+ -모양이 변경 
+ -? 
+  -위 다른 함수 참고
+	-x,y 없음
+
+   -->
+
+ <!--
+transform-origin 
+ -transform을 이용해서 요소를 변경시킬때 기준점을 설정	 
+ -기본값 : center,center (중앙으로부터 시작함)
+ -->
+<!-- 
+transform-style
+-여러가지 변형을 동시에 하는 경우 부모 요소에 적용한 3d를 하위 요소에 적용하는 속성
+-값
+ -flat :하위 요소를 평면으로 처리
+ -preserve-3d: 하위 요소에 3d효과를 적용
+
+-->
+ 
+<style>
+  .box{ width: 200px; height: 100px; border: 3px solid black; margin-bottom: 50px; background: yellow;}
+	.r1{ transform: rotateX(45deg);}
+	.r2{ transform: rotatey(45deg);}
+	.r3{ transform: rotate(45deg);}
+	.r4{ transform: rotatez(45deg);}
+	.r5{ transform: rotate3d(1,0,0,45deg);}
+	/* 3d는 xyz축 순서임 */
+
+
+</style>
+
+<style>
+ .sk1{ transform: skewX(30deg);}
+ .sk2{ transform: skewX(-15deg); width: 1px; border: 0; height: 16px; background: grey}
+
+
+</style>
+
+<style>
+.box{ width: 200px; height: 100px; border: 3px solid black; margin-bottom: 50px; background: yellow;}
+.origin1{ transform-origin: center center; transform: rotateZ(45deg);}
+.origin2{ transform-origin: 0 0; transform: rotateZ(30deg);}
+</style>
+
+<style>
+.c1{ perspective: none;}	
+.flat-container,
+.preserve-container{ display: inline-block; border: 10px solid black; transform: perspective(500px) rotateY(-60deg);}
+.box4{width: 100px; height: 100px; background: yellow; transform: perspective(500px) rotateY(60deg);}
+.flat-container{ transform-style: flat;}
+.preserve-container{ transform-style: preserve-3d;}
+
+/* 부모건 부모요소를 따라가는건 아니기때문에 요소룰 구분할줄 알아야함. */
+
+</style>
+
+</head>
+<body>
+<h1>transform속성예제</h1>
+<h2>translate함수</h2>
+<div class="container">
+	<div class="box t1">translateX</div>
+	<div class="box t2">translateY</div>
+	<div class="box t3">translate</div>
+	<div class="box t4">translateZ</div>
+	<div class="box t5">translate3d</div>
+</div>
+
+<h2>scale함수</h2>
+<div class="container">
+	<div class="boxs sc1">x</div>
+	<div class="boxs sc2">y</div>
+	<div class="boxs sc3">없음</div>
+	<div class="boxs sc4">z</div>
+	<div class="boxs sc5">3d</div>
+</div>
+
+<h2>roate함수</h2>
+<div class="container">
+<div class="box r1">x</div>
+<div class="box r2">y</div>
+<div class="box r3">없음</div>
+<div class="box r4">z</div>
+<div class="box r5">3d</div>
+
+</div>
+
+<h2>skew함수</h2>
+<div class="container">
+<div class="box sk1">X</div>
+<div class="box sk2"></div>	
+
+</div>
+
+<div class="container">
+<div class="box origin1">중심기준회전</div>
+<div class="box origin2">왼쪽위(0.0) 기준회전</div>
+
+</div>
+
+<div class="container c1">
+ <div class="flat-container">
+ 	<div class="box4"></div>
+ </div>
+ <div class="preserve-container">
+	 <div class="box4"></div>
+ </div>
+</div> 
+
+
+
+
+</body>
+</html>
