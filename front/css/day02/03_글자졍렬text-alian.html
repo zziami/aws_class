@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>글자 정렬 예제</title>
+<!-- 
+	 text-alian  교재 109쪽 (매우유용)
+	 -inline, inline-block 요소를 정렬하는 방법(글자포함) 
+	 -값
+	  -left(기본값), center, right, justify(양쪽정렬)
+
+	-->
+	<style>
+	[class^=align] {margin: 30px}
+  .align-left{ text-align: left}
+	.align-center{ text-align: center}
+	.align-right{ text-align: right}
+  .align-justify{ text-align: justify}
+	</style>
+</head>
+<body>
+	<h1>text-alian 예제</h1>
+	<h2>글자정렬</h2>
+  <div class="container">
+		<div class="align-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque facilis delectus alias quos voluptates illo officia magnam similique soluta minima.</div>
+		<div class="align-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque facilis delectus alias quos voluptates illo officia magnam similique soluta minima.</div>
+		<div class="align-right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque facilis delectus alias quos voluptates illo officia magnam similique soluta minima.</div>
+		<div class="align-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque facilis delectus alias quos voluptates illo officia magnam similique soluta minima.</div>
+
+	</div>
+ <div>
+<h2>인라인,인라인 블록요소 정렬 예제</h2>
+  <div class="container">
+	<div class="align-left">
+		<a href="#">링크</a>
+		<span>span</span>
+		<input type="text" name="" id="">
+		<button>버튼</button>
+	</div>
+	<div class="align-center">
+			<a href="#">링크</a>
+			<span>span</span>
+			<input type="text" name="" id="">
+			<button>버튼</button>
+	</div>
+	<div class="align-right">
+			<a href="#">링크</a>
+			<span>span</span>
+			<input type="text" name="" id="">
+			<button>버튼</button>
+	</div>
+	<div class="align-justify">
+			<a href="#">링크</a>
+			<span>span</span>
+			<input type="text" name="" id="">
+			<button>버튼</button>
+	</div>
+
+<h2>블락요소정렬예제</h2>
+
+  <div class="container align-center">
+    안녕하세요.
+  </div>
+
+	
+  <class="container align-center">
+	<div>
+
+	 <div class="box" style="width: 200px; background: yellow;">안녕하세요.</div>
+  </div>
+</body>
+</html>
