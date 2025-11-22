@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>overflow속성예제</title>
+	<!-- 
+  	 
+		overflow
+		-부모밖에 있는 컨텐츠가 튀어나가지 않도록하는것임. 텍스트건 사진이건 뭐건간에 상자밖으로 나가지마!
+		-요소안에 있는 컨텐츠(자손요소들)가 요소크기를 벗어났을 때 처리하는 방법을 설정.
+    -값
+		 - visible :넘어가는 부분을 보여줌. 기본값
+		 - auto : 범위를 넘어가면 scroll, 없으면 hidden 
+		 - scroll : 스크롤을 추가해서 넘어가는 범위를 보게함. 스크롤 반드시추가(넘어가든 안넘어가든) 
+		 - hidden : 넘어가는 부분을 감춤
+
+ -->
+
+ <style>
+ .box{width: 200px; height: 50px; border: 1px solid black; margin-bottom: 80px;}
+ .box1{ overflow: visible;}
+ /* 바뀌는거 없음  */
+ .box2{ overflow: auto;}
+ /* 글자가 많아서 스크롤 생기고 */
+ .box3{ overflow: auto;}
+ /* 글자가 적으니 스크롤은 안생김 */
+ .box4{ overflow: scroll;}
+ .box5{ overflow: scroll;}
+ /* 글자가 많으나 적으나 스크롤이 생김 */
+ .box6{ overflow: hidden;}
+ /* 글자가  많으나 정해진 박스 크기가 넘으면 글자가 보이지 않는것. */
+ .box7{ font-size: 40px; height: 200px; overflow: auto; scrollbar-width: none;}
+ /* 7번박스 스크롤바기능은 그대로 있지만 스크롤바모양은 감추기 */
+ .box7::-webkit-scrollbar{ display: none;}
+ /* web-kit는 접두어로 크롬 사파리나
+   moz- 파이어폭스
+	 ms- 익스플로러, 엣지(구버전등) 
+	 o-오페라 
+   특정브라우저에서 특정기능을 먼저적용하는  
+	 
+	 display none css속성값으로 html요소를 완전히 제거하라는 뜻으로
+	 해당요소는 사용자에게 보여지지 않음. 요소가 */
+
+
+ </style>
+</head>
+
+<body>
+	<h1>overflow속성예제</h1>
+	<div class="container">
+		<div class="box box1">1번박스Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magnam voluptatum ea, hic eaque modi! Eligendi amet aut sunt corrupti!</div>
+	  <div class="box box2">2번박스Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magnam voluptatum ea, hic eaque modi! Eligendi amet aut sunt corrupti!</div>
+    <div class="box box3">3번박스Lorem ipsum dolor sit amet </div>
+    <div class="box box4">4번박스Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magnam voluptatum ea, hic eaque modi! Eligendi amet aut sunt corrupti!</div>
+    <div class="box box5">5번박스Lorem ipsum dolor sit amet </div>
+    <div class="box box6">6번박스Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magnam voluptatum ea, hic eaque modi! Eligendi amet aut sunt corrupti!</div>
+    <div class="box box7">7번박스Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magnam voluptatum ea, hic eaque modi! Eligendi amet aut sunt corrupti!</div>
+    
+	</div>
+</body>
+
+</html>
