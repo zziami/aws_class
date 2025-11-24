@@ -12,7 +12,7 @@
 	<style>
   .container{ width: 150px; box-sizing: border-box; border: 1px solid rgb(248, 246, 246); overflow: hidden;}  
    /* 처음에 컨텐츠박스로했는데.. 사진이 액자크기보다 커지는거 같아서 보더로 바꿔봄. 요거는 기초프레임만짠거임 액자크기인거지 */
-  .img{ background: url(../../../static/img/숙제용이미지.webp); height: 200px; width: 100%; background-size: contain; 
+	   .img{ background: url(../../../static/img/숙제용이미지.webp); height: 200px; width: 100%; background-size: contain; 
 		box-sizing: border-box; }
 	/* (사진크기가 액자크기보다 커서 사진이 짤림 그래서 사이즈도 추가해봄 근데 그래도 짤림 그래서 cover를 해봄.
 	 사진이 꽉차다보니깐 비율은 유지되는데 일부기능에서 에러가 남. 그래서 이미지가 전체틀안으로 들어오도록 컨테인으로바꿔줌. 비율도 유지하고
@@ -20,8 +20,9 @@
 	 그래도 컨테이너랑 묘하게 틀어지는거 같아서 이것도 박스사이징을 보더박스로 규정해봄.그랬더니만 오른쪽 상하테두리부분에 격자무늬발생
 	 백그라운드 반복금지시켜봄.그래도 틀어짐 (적용필요없음) 백그라운드포지션넣어봄...(이것도 필요없음) 디스플레이도 블락해봄 안됨.(이것도 필요없는거고) 다필요없었음..   
 	 부모기준 사이즈!!!	사진규격맞는거 찾기힘들어...... 흠....... 젠장.. 정말 css는 지랄임. */
-	
-	 .img:hover{ transform: scale(1.03);}	
+	 .box-1{ overflow: hidden;}  
+	 /* 박스를 가두고 또 가두기 */
+	.img:hover{ transform: scale(1.03);}	
 	 /* 트랜스폼 스케일할때 숫자예제모음처럼 세개다 쓰면 안됨... */
 	.box{ width: 100%; height: 24px; font-size: 8px; box-sizing: border-box;  text-align: center; }
 	.box:hover{text-decoration: underline; font-weight: bold;}
@@ -42,7 +43,9 @@
 
 
   <div class="container">
-		<div class="img"></div>
+		<div class="box-1">
+			<div class="img"></div>
+		</div>
 		<div class="box"> 연말에 가족과 함께하기 좋은 기획 전시회 <br> 국립현대미술관 </div>
   </div>  
 	 
