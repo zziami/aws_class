@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex연습예제</title>
+ <style>
+	.box{ width: 100px; height: 100px; background: red;}
+	.contariner{ background: yellow;}
+  
+	/* 가운데정렬 */
+ .contariner{ 
+	display: flex; 
+	flex-direction: row;
+	justify-content: center;}	
+
+ /* 주축방향으로 좌우 가운데 정렬 */
+
+ .container2 .box{width: 100px; height: 100px; background: red; }
+ .container2{background: yellow; margin-top: 30px; height: 200px;}
+
+ .container2{
+	display: flex;
+	/* flex-direction: column; 이건왜안돼는거야?? 왜 */
+	justify-content: center; 
+	/* 교차축 아이템 배치를 가운데  */
+  flex-wrap: wrap;
+	align-content: space-evenly; }
+	
+ /*.align-items: center */
+
+ </style>
+ 
+ <style>
+/* 문제3번 내가한거 끝까지해보기 */
+ .container3 .box{width: 100px; height: 100px; background: red; margin-bottom: 30px;}
+ .container3 {background: yellow; margin-top: 30px; height: 200px;}
+	 .container3{	display: flex; justify-content: space-between; }
+ .box2+.box4{ align-items:  flex-end ; }
+
+
+ /* 문제3-1번 강사님 스타일 */
+ .container4 .box{ background: yellow; margin-top: 30px; display: flex; justify-content: space-between; margin-bottom: 30px;}
+ .right-box{display: flex;}
+	/* 2~4번까지 한라인에 */
+
+ /* 문제4번 가운데 1개 2~4번 오른쪽정렬*/
+ 
+ .container5{width: 100px; height: 100px; border: 3px; solid black;}
+ .container5{background: yellow; margin-top: 30px; height: 200px;}
+ .containet5{display: flex; justify-content: center;}
+ .right-box{ display: flex ;}
+
+ 
+/* 문제4번 선생님 해답 */
+
+ .container6 .box{ width: 50px; height:50px; background: red;}
+ .container6{margin-top: 30px; background: yellow; position: relative;}
+ .inner-container6-1{display: flex; justify-content: center;}
+ .inner-container6-2{position: absolute; top: 0; right: 0; display: flex;}
+	/* 포지션 앱솔루트는 큰 컨테이너 박스 위를 덮어서 센터에 오게함, 포지션 앱솔루트 공부해야행 모르겠음 */
+ </style>
+</head>
+<body>
+	<!-- 
+	 아래같은 구조로 되어 있는 화면에서 flex를 이용하여 요소가 가운데 (좌우)정렬이 되도록 작성
+	  -->
+
+	<div class="contariner">
+		<div class="box">가운데정렬문제1</div>
+	</div>
+
+
+	<!-- 
+	아래같은 구조로 되어 있는 화면에서 flex를 이용하여 요소가 가운데(상하,좌우)정렬이 되도록 작성. -->
+	<div class="container2">
+		<div class="box">가운데정렬문제2</div>
+	</div>
+ 
+	
+	<!-- 문제3번  -->
+	<div class="container3"> 
+		<div class="box">1</div>
+		<div class="box">2</div>
+		<div class="box">3</div>
+		<div class="box">4</div>
+	</div>
+
+
+  <!-- 문제3-1번 강사님 스타일.. 큰박스안에 1번박스 왼쪽으로 2,3,4 번박스를 오른쪽에 하나의 박스로 묶어서하기 -->
+	<div class="container4">
+	  <div class="box">4-1</div>
+	   <div class="right-box">
+      <div class="box">4-2</div>
+      <div class="box">4-3</div>
+	    <div class="box">4-4</div>
+		 </div>
+	</div>
+
+
+	<!-- 문제4 컨테이너 박스를 기준으로 1번박스 가운에 2~4번박스는 오른쪽으로 하기. -->
+
+	<div class="containet5">
+	  <div class="box">5-1</div>
+		 <div class="right-box">
+		  <div class="box">5-2</div>
+		  <div class="box">5-3</div>
+		  <div class="box">5-4</div>
+		</div>
+	</div>	
+
+	<!-- 문제5 -->
+	 <div class="container6">
+		 <div class="inner-container6-1">
+			<div class="box">6-1</div>
+			<div class="inner-container6-2">
+			<div class="box2">6-2</div>	
+			<div class="box2">6-3</div>	
+			<div class="box2">6-4</div>	
+		 </div>
+	 </div>
+</body>
+</html>
