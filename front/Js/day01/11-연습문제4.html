@@ -13,14 +13,14 @@
 // prompt로 정수를 입력받아 입력받은 정수가 짝수인지 홀수인지 판별하여
 // document.write로 결화(홀수,짝수)를 출력하세요
 
- if(정수를 2로 나누었을때 나머지가 0과같다){짝수를 출력;}else{홀수를 출력;}
+//  if(정수를 2로 나누었을때 나머지가 0과같다){짝수를 출력;}else{홀수를 출력;}
 
  
  let num = prompt("정수입력");
  num = parseInt(num);//문자열을 정수로변환
 
- lf(num1%2 == 0) {document.write(`${num}는 짝수<br>`);}
- else {document.write(`${num}는 홀수<br>`);}
+ if(num % 2 == 0) {document.write(`${num}는 짝수<br>`);}
+	else{document.write(`${num}는 홀수<br>`);}
 
 </script>
 </body>
