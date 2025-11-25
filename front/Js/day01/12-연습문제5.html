@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>성적출력예제</title>
+</head>
+<body>
+	<script>
+		/*성적을 입력받아 (prompt)학점을 출력하세요 (document.write)
+		90~100 :a 
+		(성적이90점 이상이고 100이하이면 a) (성적이 90점이상이고 성적이 100점이하이면 a) (성적이90보다 크거나 같고 성적이 100보다 작거나 같으면 a)
+		조건식으로 변경해서- (성적이 90보다 크거나 같고 성적이 100보다 작거나 같다.)(성적이 90보다 크거나 같다&& 성적이 100보다 작거나 같다.)
+		따라서 성적>=90 && 성적<=100
+
+		80~89 :b
+		70~79 :c
+		60~69 : d
+		0~59 : f */
+
+
+    let num = prompt("100");
+		if(num >= 90 && num <= 100 ) {document.write(`${num}은 a학점.<br>`);}
+		
+		else if(num >=80 && num <=89) {document.write(`${num}은 b학점이다.<br>`);}  
+		// a학점이 아닌 성적중에 b학점을 찾음
+		else if(num >=70 && num <=79) {document.write(`${num}은 c학점이다.<br>`);}  
+    // a.b학점이 아닌 성적중에서 c학점을 찾음
+		else if(num >=60 && num <=69) {document.write(`${num}은 d학점이다.<br>`);}
+		// a.b.c 학점이 아닌 성적중에서 d학점을 찾음.
+		else {document.write(`${num}은 f학점이다.<br>`);}
+    // a.b.c.d학점이 아니면f학점 
+		
+
+
+	</script>
+</body>
+</html>
