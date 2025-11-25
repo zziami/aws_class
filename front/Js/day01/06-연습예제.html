@@ -18,7 +18,7 @@
 // let num2: 밑에처럼 줄일수도 있음 
    let num1,num2;
 
-// num1에 prompt를 이용하여 입력한 정수를저장
+	 // num1에 prompt를 이용하여 입력한 정수를저장     앞에 설정값이 , 초기값임. 0은 없어도 되는값임. 
   num1 = prompt("정수1를 입력", 0);
 
 // num2에 prompt를 이용하여 입력한 정수를저장
@@ -30,14 +30,15 @@
 
 
 
-//  내가해본것 
-  	let str = prompt("당신의 나이는?",0);
+   //  내가해본것 
+  	let str = prompt("당신의 나이는?");
 		console.log(str);
-		document.write(`${str}<br>`);
-
-		let str1 = prompt("당신의 직업은?",0);
+		// 내가 박스에 입력한 값이 콘솔에 저장됨. 개발자창의 콘솔에 (로그는 화면에 보이게하는 기능임.)사실상 필요는없눈 확인용.
+		document.write(`${str}  + 세<br>`);
+    // 웹브라우저에 출력되는 값 변수를 사용하는 이유는 입력값의 변동에 따라서 확인을 해보기 위해서 
+		let str1 = prompt("당신의 직업은?");
 		console.log(str1);
-		document.write(`${str}<br>`);
+		document.write("직업: " + `${str1}<br>`);
 
 
 
